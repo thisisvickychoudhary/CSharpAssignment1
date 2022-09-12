@@ -10,16 +10,17 @@ namespace CSharpAssignment1
         {
             try
             {
-                Console.Write("Enter a number: \n");
-                float num1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter First Number: \n");
+                int num1 = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Enter another number: \n");
-                float num2 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Second Number: \n");
+                int num2 = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("{0} + {1} = {2}", num1, num2, num1 + num2);
                 Console.WriteLine("{0} - {1} = {2}", num1, num2, num1 - num2);
                 Console.WriteLine("{0} x {1} = {2}", num1, num2, num1 * num2);
                 Console.WriteLine("{0} / {1} = {2}", num1, num2, num1 / num2);
+                
             }
             catch (FormatException)
             {

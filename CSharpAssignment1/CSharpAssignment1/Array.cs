@@ -7,33 +7,36 @@ namespace CSharpAssignment1
     public class Array
     {
         public void Arr() {
-            l1:
-            int[] a = new int[3];
-            int i, sum = 0;
-
-
-            Console.Write("\n\nFind sum of all elements of array:\n");
             try
             {
-                for (i = 0; i < a.Length; i++)
+                int[] a = new int[100];
+                int i, n, sum = 0;
+
+
+                Console.Write("\n\nFind sum of all elements of array:\n");
+                Console.Write("--------------------------------------\n");
+
+                Console.Write("Input the number of elements to be stored in the array :");
+                n = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Input {0} elements in the array :\n", n);
+                for (i = 0; i < n; i++)
                 {
                     Console.Write("element - {0} : ", i);
                     a[i] = Convert.ToInt32(Console.ReadLine());
                 }
+
+                for (i = 0; i < n; i++)
+                {
+                    sum += a[i];
+                }
+
+                Console.Write("Sum of all elements stored in the array is : {0}\n\n", sum);
             }
-            catch (FormatException) {
-                Console.Write("Please Enter Only Integer number\n");
-                goto l1;
-            }
-            
-            for (i = 0; i < a.Length; i++)
+            catch (FormatException)
             {
-                sum += a[i];
+                Console.WriteLine("Please Enter only Integer Number");
             }
-
-            Console.Write("Sum of all elements stored in the array is : {0}", sum);
-
-
         }
     }
 }
